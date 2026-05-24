@@ -54,6 +54,60 @@ Domain vocabulary is defined in [CONTEXT.md](CONTEXT.md).
 | `hallucination-trap-001` | Vague query, no tools expected |
 | `out-of-scope-001` | Out-of-scope request, no routing |
 
+## Reference setup
+
+The published benchmark results were collected on the host below, with inference served by **[Lemonade](https://github.com/lemonade-sdk/lemonade)** — a local LLM server that wraps **llama.cpp** with AMD-specific builds and optimizations (ROCm/Vulkan backends, model manager, OpenAI-compatible API).
+
+### Lemonade (Docker + ROCm)
+
+Lemonade runs in Docker with the ROCm backend and AMD GPU device passthrough. See the [Docker install guide](https://lemonade-server.ai/docs/guide/install/docker/) for details.
+
+```bash
+docker run -d \
+  --name lemonade-server \
+  -p 13305:13305 \
+  -v lemonade-cache:/root/.cache/huggingface \
+  -v lemonade-llama:/opt/lemonade/llama \
+  -v lemonade-recipe:/root/.cache/lemonade \
+  -e LEMONADE_LLAMACPP=rocm \
+  --device=/dev/kfd \
+  --device=/dev/dri \
+  ghcr.io/lemonade-sdk/lemonade-server:latest
+```
+
+The server exposes an OpenAI-compatible API at `http://localhost:13305/v1`. Download GGUF models via the Lemonade model manager, then point this benchmark at them with `LEMONADE_MODEL` (see [Running the benchmark](#running-the-benchmark)).
+
+Models used in the comparison runs:
+
+- `Gemma-4-26B-A4B-it-GGUF`
+- `Gemma-4-E4B-it-GGUF`
+- `GLM-4.7-Flash-GGUF`
+- `Qwen3.5-4B-MTP-GGUF`
+- `Qwen3.5-9B-GGUF`
+- `Qwen3.6-35B-A3B-MTP-GGUF`
+- `gpt-oss-20b-mxfp4-GGUF`
+
+### Hardware
+
+Captured with [`fastfetch`](https://github.com/fastfetch-cli/fastfetch) on the benchmark host:
+
+```
+felix@aurora
+OS:     Aurora 44 (Linux 6.19.14-101.fc44.x86_64)
+Board:  B860M AORUS ELITE WIFI6E
+CPU:    Intel Core Ultra 5 245K (14) @ 5.20 GHz
+GPU:    AMD Radeon RX 9060 XT [Discrete]
+iGPU:   Intel Graphics @ 1.90 GHz
+Memory: 30.81 GiB
+Disk:   498.75 GiB (btrfs)
+```
+
+Reproduce on your machine:
+
+```bash
+fastfetch
+```
+
 ## Running the benchmark
 
 ### Prerequisites
