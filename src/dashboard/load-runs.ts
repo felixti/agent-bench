@@ -44,12 +44,14 @@ type TraceFile = {
   score: TraceScore;
 };
 
+export const RUNS_ROOT = "runs";
+
 export function isGgufModelRunDir(name: string): boolean {
   return name.includes("GGUF");
 }
 
 export async function loadDashboardData(
-  runsRoot = join(import.meta.dir, "../../runs"),
+  runsRoot = join(import.meta.dir, "../../", RUNS_ROOT),
 ): Promise<DashboardData> {
   const entries = await readdir(runsRoot, { withFileTypes: true });
   const modelDirs = entries
@@ -76,7 +78,7 @@ export async function loadDashboardData(
 
     models.push({
       model_id: modelId,
-      run_dir: `runs/${modelId}`,
+      run_dir: `${RUNS_ROOT}/${modelId}`,
       summary,
       total_duration_ms: totalDurationMs,
       rows,
@@ -85,7 +87,7 @@ export async function loadDashboardData(
 
   return {
     generated_at: new Date().toISOString(),
-    runs_root: runsRoot,
+    runs_root: RUNS_ROOT,
     models,
   };
 }

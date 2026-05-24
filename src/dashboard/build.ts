@@ -2,17 +2,18 @@ import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { loadDashboardData } from "./load-runs.ts";
 
-const outputPath = join(import.meta.dir, "../../dashboard.html");
+const repoRoot = join(import.meta.dir, "../..");
+const outputPath = join(repoRoot, "dashboard.html");
+const dataPath = join(repoRoot, "dashboard-data.json");
 
 const data = await loadDashboardData();
-const html = renderDashboard(data);
+const html = renderDashboard();
 
+await writeFile(dataPath, `${JSON.stringify(data, null, 2)}\n`);
 await writeFile(outputPath, html);
-console.error(`wrote ${outputPath} (${data.models.length} models)`);
+console.error(`wrote ${outputPath} and ${dataPath} (${data.models.length} models)`);
 
-function renderDashboard(data: Awaited<ReturnType<typeof loadDashboardData>>): string {
-  const payload = JSON.stringify(data).replaceAll("<", "\\u003c");
-
+function renderDashboard(): string {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -383,7 +384,7 @@ function renderDashboard(data: Awaited<ReturnType<typeof loadDashboardData>>): s
   <div class="tooltip" id="tooltip"></div>
 
   <script>
-    const DATA = ${payload};
+    let DATA = null;
 
     const AXES = ["routing", "tool_selection", "tool_args", "world_state", "completion"];
     const AXIS_LABELS = {
@@ -700,7 +701,35 @@ function renderDashboard(data: Awaited<ReturnType<typeof loadDashboardData>>): s
       renderHeatmap();
     });
 
-    renderAll();
+    async function loadData() {
+      const response = await fetch(new URL("dashboard-data.json", document.baseURI));
+      if (!response.ok) {
+        throw new Error(\`Failed to load dashboard-data.json (\${response.status})\`);
+      }
+      return response.json();
+    }
+
+    function showLoadError(error) {
+      const message =
+        \`Could not load <code>dashboard-data.json</code>: \${escapeAttr(error.message)}. \` +
+        "Run <code>bun run dashboard</code>, then open this page from a local web server " +
+        "(for example <code>bunx serve .</code> in the repo root).";
+      document.getElementById("summary-cards").innerHTML = "";
+      document.getElementById("axis-grid").innerHTML = "";
+      document.getElementById("heatmap-wrap").innerHTML = "";
+      document.getElementById("leaderboard-wrap").innerHTML = \`<div class="empty">\${message}</div>\`;
+    }
+
+    async function init() {
+      try {
+        DATA = await loadData();
+        renderAll();
+      } catch (error) {
+        showLoadError(error instanceof Error ? error : new Error(String(error)));
+      }
+    }
+
+    init();
   </script>
 </body>
 </html>`;

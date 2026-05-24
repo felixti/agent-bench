@@ -106,8 +106,6 @@ scoreRun({ row, route, toolCalls, finalWorldState, completionFailure })
 ```
 
 ```bash
-# ❌ Expecting dashboard to read benchmarks/
-# Dashboard scans runs/ for *GGUF* directories with summary.json
-
 # ✅ Run bench with --out runs/MyModel-GGUF, then bun run dashboard
+# Dashboard loads ./dashboard-data.json (relative paths; serve repo over HTTP)
 ```

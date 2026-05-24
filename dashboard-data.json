@@ -1,0 +1,2848 @@
+{
+  "generated_at": "2026-05-24T03:28:44.148Z",
+  "runs_root": "runs",
+  "models": [
+    {
+      "model_id": "Gemma-4-26B-A4B-it-GGUF",
+      "run_dir": "runs/Gemma-4-26B-A4B-it-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 12,
+        "failed_rows": 0,
+        "pass_rate": 1,
+        "axis_pass_rates": {
+          "routing": 1,
+          "tool_selection": 1,
+          "tool_args": 1,
+          "world_state": 1,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": true,
+            "duration_ms": 61051
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 21782
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 16539
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 28123
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 80672
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": true,
+            "duration_ms": 24734
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": true,
+            "duration_ms": 38292
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 28792
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": true,
+            "duration_ms": 23038
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": true,
+            "duration_ms": 39006
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 32863
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": true,
+            "duration_ms": 6060
+          }
+        ]
+      },
+      "total_duration_ms": 400952,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": true,
+          "duration_ms": 61051,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 21782,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 16539,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 28123,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 80672,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": true,
+          "duration_ms": 24734,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": true,
+          "duration_ms": 38292,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 28792,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": true,
+          "duration_ms": 23038,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": true,
+          "duration_ms": 39006,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 32863,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": true,
+          "duration_ms": 6060,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: none"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model_id": "Gemma-4-E4B-it-GGUF",
+      "run_dir": "runs/Gemma-4-E4B-it-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 12,
+        "failed_rows": 0,
+        "pass_rate": 1,
+        "axis_pass_rates": {
+          "routing": 1,
+          "tool_selection": 1,
+          "tool_args": 1,
+          "world_state": 1,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": true,
+            "duration_ms": 12958
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 7309
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 8580
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 15906
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 6689
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": true,
+            "duration_ms": 9295
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": true,
+            "duration_ms": 20088
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 15166
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": true,
+            "duration_ms": 9153
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": true,
+            "duration_ms": 25431
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 14637
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": true,
+            "duration_ms": 1922
+          }
+        ]
+      },
+      "total_duration_ms": 147134,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": true,
+          "duration_ms": 12958,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 7309,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 8580,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 15906,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 6689,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": true,
+          "duration_ms": 9295,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": true,
+          "duration_ms": 20088,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 15166,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": true,
+          "duration_ms": 9153,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": true,
+          "duration_ms": 25431,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 14637,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": true,
+          "duration_ms": 1922,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: none"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model_id": "GLM-4.7-Flash-GGUF",
+      "run_dir": "runs/GLM-4.7-Flash-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 9,
+        "failed_rows": 3,
+        "pass_rate": 0.75,
+        "axis_pass_rates": {
+          "routing": 0.8333,
+          "tool_selection": 0.75,
+          "tool_args": 0.75,
+          "world_state": 0.8333,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": true,
+            "duration_ms": 6961
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 7611
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 6840
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 7266
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 6810
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": true,
+            "duration_ms": 7854
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": false,
+            "duration_ms": 8347
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 13463
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": false,
+            "duration_ms": 11620
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": false,
+            "duration_ms": 12628
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 10806
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": true,
+            "duration_ms": 3849
+          }
+        ]
+      },
+      "total_duration_ms": 104055,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": true,
+          "duration_ms": 6961,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 7611,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 6840,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 7266,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 6810,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": true,
+          "duration_ms": 7854,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": false,
+          "duration_ms": 8347,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route risk -> payments, got payments"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing risk.assess_risk"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for risk.assess_risk"
+            },
+            "world_state": {
+              "passed": false,
+              "details": "cards.card_001.blocked: expected true, got false"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 13463,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": false,
+          "duration_ms": 11620,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route risk, got support"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing risk.assess_risk"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for risk.assess_risk"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": false,
+          "duration_ms": 12628,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support -> payments"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing support.list_payments"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for support.list_payments"
+            },
+            "world_state": {
+              "passed": false,
+              "details": "payments.pay_007.status: expected \"refunded\", got \"captured\""
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 10806,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": true,
+          "duration_ms": 3849,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: none"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model_id": "gpt-oss-20b-mxfp4-GGUF",
+      "run_dir": "runs/gpt-oss-20b-mxfp4-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 9,
+        "failed_rows": 3,
+        "pass_rate": 0.75,
+        "axis_pass_rates": {
+          "routing": 0.75,
+          "tool_selection": 0.75,
+          "tool_args": 0.75,
+          "world_state": 0.8333,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": true,
+            "duration_ms": 4719
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 4648
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 3732
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 3235
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 4574
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": true,
+            "duration_ms": 5166
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": false,
+            "duration_ms": 9723
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 9709
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": false,
+            "duration_ms": 4385
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": false,
+            "duration_ms": 6764
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 5833
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": true,
+            "duration_ms": 2127
+          }
+        ]
+      },
+      "total_duration_ms": 64615,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": true,
+          "duration_ms": 4719,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 4648,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 3732,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 3235,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 4574,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": true,
+          "duration_ms": 5166,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": false,
+          "duration_ms": 9723,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route risk -> payments, got risk"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing payments.refund"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for payments.refund"
+            },
+            "world_state": {
+              "passed": false,
+              "details": "payments.pay_001.status: expected \"refunded\", got \"captured\""
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 9709,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": false,
+          "duration_ms": 4385,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route risk, got support"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing risk.assess_risk"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for risk.assess_risk"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": false,
+          "duration_ms": 6764,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route support -> payments, got support"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing payments.refund"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for payments.refund"
+            },
+            "world_state": {
+              "passed": false,
+              "details": "payments.pay_007.status: expected \"refunded\", got \"captured\""
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 5833,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": true,
+          "duration_ms": 2127,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: none"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen3.5-4B-MTP-GGUF",
+      "run_dir": "runs/Qwen3.5-4B-MTP-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 9,
+        "failed_rows": 3,
+        "pass_rate": 0.75,
+        "axis_pass_rates": {
+          "routing": 0.75,
+          "tool_selection": 0.9167,
+          "tool_args": 0.9167,
+          "world_state": 1,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": false,
+            "duration_ms": 12690
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 7046
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 7873
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 8487
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 7342
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": false,
+            "duration_ms": 13957
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": true,
+            "duration_ms": 16908
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 9957
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": true,
+            "duration_ms": 7402
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": true,
+            "duration_ms": 12604
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 14307
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": false,
+            "duration_ms": 9818
+          }
+        ]
+      },
+      "total_duration_ms": 128391,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": false,
+          "duration_ms": 12690,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route support, got none"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing support.get_payment_status"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for support.get_payment_status"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 7046,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 7873,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 8487,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 7342,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": false,
+          "duration_ms": 13957,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route payments, got payments -> support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": true,
+          "duration_ms": 16908,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 9957,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": true,
+          "duration_ms": 7402,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": true,
+          "duration_ms": 12604,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 14307,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": false,
+          "duration_ms": 9818,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route none, got payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen3.5-9B-GGUF",
+      "run_dir": "runs/Qwen3.5-9B-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 12,
+        "failed_rows": 0,
+        "pass_rate": 1,
+        "axis_pass_rates": {
+          "routing": 1,
+          "tool_selection": 1,
+          "tool_args": 1,
+          "world_state": 1,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": true,
+            "duration_ms": 8561
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 10983
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 12807
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 11537
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 11194
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": true,
+            "duration_ms": 15829
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": true,
+            "duration_ms": 33617
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 11998
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": true,
+            "duration_ms": 9955
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": true,
+            "duration_ms": 18464
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 9626
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": true,
+            "duration_ms": 11637
+          }
+        ]
+      },
+      "total_duration_ms": 166208,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": true,
+          "duration_ms": 8561,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 10983,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 12807,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 11537,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 11194,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": true,
+          "duration_ms": 15829,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": true,
+          "duration_ms": 33617,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 11998,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": true,
+          "duration_ms": 9955,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": true,
+          "duration_ms": 18464,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 9626,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": true,
+          "duration_ms": 11637,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: none"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model_id": "Qwen3.6-35B-A3B-MTP-GGUF",
+      "run_dir": "runs/Qwen3.6-35B-A3B-MTP-GGUF",
+      "summary": {
+        "total_rows": 12,
+        "passed_rows": 11,
+        "failed_rows": 1,
+        "pass_rate": 0.9167,
+        "axis_pass_rates": {
+          "routing": 0.9167,
+          "tool_selection": 0.9167,
+          "tool_args": 0.9167,
+          "world_state": 0.9167,
+          "completion": 1
+        },
+        "row_results": [
+          {
+            "row_id": "support-status-001",
+            "passed": true,
+            "duration_ms": 25410
+          },
+          {
+            "row_id": "support-list-001",
+            "passed": true,
+            "duration_ms": 22646
+          },
+          {
+            "row_id": "support-deflect-001",
+            "passed": true,
+            "duration_ms": 60825
+          },
+          {
+            "row_id": "payments-refund-001",
+            "passed": true,
+            "duration_ms": 36515
+          },
+          {
+            "row_id": "payments-charge-001",
+            "passed": true,
+            "duration_ms": 26578
+          },
+          {
+            "row_id": "payments-not-found-001",
+            "passed": true,
+            "duration_ms": 46385
+          },
+          {
+            "row_id": "risk-refund-001",
+            "passed": false,
+            "duration_ms": 35181
+          },
+          {
+            "row_id": "risk-block-only-001",
+            "passed": true,
+            "duration_ms": 33951
+          },
+          {
+            "row_id": "risk-low-score-001",
+            "passed": true,
+            "duration_ms": 23481
+          },
+          {
+            "row_id": "support-then-payments-001",
+            "passed": true,
+            "duration_ms": 46391
+          },
+          {
+            "row_id": "hallucination-trap-001",
+            "passed": true,
+            "duration_ms": 52596
+          },
+          {
+            "row_id": "out-of-scope-001",
+            "passed": true,
+            "duration_ms": 16217
+          }
+        ]
+      },
+      "total_duration_ms": 426176,
+      "rows": [
+        {
+          "row_id": "support-status-001",
+          "passed": true,
+          "duration_ms": 25410,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-list-001",
+          "passed": true,
+          "duration_ms": 22646,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-deflect-001",
+          "passed": true,
+          "duration_ms": 60825,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-refund-001",
+          "passed": true,
+          "duration_ms": 36515,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-charge-001",
+          "passed": true,
+          "duration_ms": 26578,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "payments-not-found-001",
+          "passed": true,
+          "duration_ms": 46385,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-refund-001",
+          "passed": false,
+          "duration_ms": 35181,
+          "axes": {
+            "routing": {
+              "passed": false,
+              "details": "expected route risk -> payments, got none"
+            },
+            "tool_selection": {
+              "passed": false,
+              "details": "missing risk.assess_risk"
+            },
+            "tool_args": {
+              "passed": false,
+              "details": "no argument match for risk.assess_risk"
+            },
+            "world_state": {
+              "passed": false,
+              "details": "cards.card_001.blocked: expected true, got false"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-block-only-001",
+          "passed": true,
+          "duration_ms": 33951,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "risk-low-score-001",
+          "passed": true,
+          "duration_ms": 23481,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: risk"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "support-then-payments-001",
+          "passed": true,
+          "duration_ms": 46391,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: support -> payments"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "world state matched"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "hallucination-trap-001",
+          "passed": true,
+          "duration_ms": 52596,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "routing ignored for this row"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        },
+        {
+          "row_id": "out-of-scope-001",
+          "passed": true,
+          "duration_ms": 16217,
+          "axes": {
+            "routing": {
+              "passed": true,
+              "details": "route matched: none"
+            },
+            "tool_selection": {
+              "passed": true,
+              "details": "all expected tools were selected"
+            },
+            "tool_args": {
+              "passed": true,
+              "details": "all expected tool arguments matched"
+            },
+            "world_state": {
+              "passed": true,
+              "details": "no world state assertion"
+            },
+            "completion": {
+              "passed": true,
+              "details": "completed cleanly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
