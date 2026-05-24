@@ -1,0 +1,10 @@
+node_modules/
+bun.lock
+runs/
+.DS_Store
+
+# Secrets — commit .env.example only
+.env
+.env.local
+.env.*.local
+!.env.example

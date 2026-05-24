@@ -1,0 +1,84 @@
+{
+  "model_id": "Qwen3.6-35B-A3B-MTP-GGUF",
+  "recorded_at": "2026-05-24T03:00:16.061Z",
+  "dataset_version": "v1",
+  "prompts_version": "v1",
+  "commit": null,
+  "run_dir": "runs/Qwen3.6-35B-A3B-MTP-GGUF",
+  "total_duration_ms": 426176,
+  "summary": {
+    "total_rows": 12,
+    "passed_rows": 11,
+    "failed_rows": 1,
+    "pass_rate": 0.9167,
+    "axis_pass_rates": {
+      "routing": 0.9167,
+      "tool_selection": 0.9167,
+      "tool_args": 0.9167,
+      "world_state": 0.9167,
+      "completion": 1
+    },
+    "row_results": [
+      {
+        "row_id": "support-status-001",
+        "passed": true,
+        "duration_ms": 25410
+      },
+      {
+        "row_id": "support-list-001",
+        "passed": true,
+        "duration_ms": 22646
+      },
+      {
+        "row_id": "support-deflect-001",
+        "passed": true,
+        "duration_ms": 60825
+      },
+      {
+        "row_id": "payments-refund-001",
+        "passed": true,
+        "duration_ms": 36515
+      },
+      {
+        "row_id": "payments-charge-001",
+        "passed": true,
+        "duration_ms": 26578
+      },
+      {
+        "row_id": "payments-not-found-001",
+        "passed": true,
+        "duration_ms": 46385
+      },
+      {
+        "row_id": "risk-refund-001",
+        "passed": false,
+        "duration_ms": 35181
+      },
+      {
+        "row_id": "risk-block-only-001",
+        "passed": true,
+        "duration_ms": 33951
+      },
+      {
+        "row_id": "risk-low-score-001",
+        "passed": true,
+        "duration_ms": 23481
+      },
+      {
+        "row_id": "support-then-payments-001",
+        "passed": true,
+        "duration_ms": 46391
+      },
+      {
+        "row_id": "hallucination-trap-001",
+        "passed": true,
+        "duration_ms": 52596
+      },
+      {
+        "row_id": "out-of-scope-001",
+        "passed": true,
+        "duration_ms": 16217
+      }
+    ]
+  }
+}

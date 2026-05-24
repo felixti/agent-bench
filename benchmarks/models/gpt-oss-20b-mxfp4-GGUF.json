@@ -1,0 +1,84 @@
+{
+  "model_id": "gpt-oss-20b-mxfp4-GGUF",
+  "recorded_at": "2026-05-24T03:08:03.959Z",
+  "dataset_version": "v1",
+  "prompts_version": "v1",
+  "commit": null,
+  "run_dir": "runs/gpt-oss-20b-mxfp4-GGUF",
+  "total_duration_ms": 64615,
+  "summary": {
+    "total_rows": 12,
+    "passed_rows": 9,
+    "failed_rows": 3,
+    "pass_rate": 0.75,
+    "axis_pass_rates": {
+      "routing": 0.75,
+      "tool_selection": 0.75,
+      "tool_args": 0.75,
+      "world_state": 0.8333,
+      "completion": 1
+    },
+    "row_results": [
+      {
+        "row_id": "support-status-001",
+        "passed": true,
+        "duration_ms": 4719
+      },
+      {
+        "row_id": "support-list-001",
+        "passed": true,
+        "duration_ms": 4648
+      },
+      {
+        "row_id": "support-deflect-001",
+        "passed": true,
+        "duration_ms": 3732
+      },
+      {
+        "row_id": "payments-refund-001",
+        "passed": true,
+        "duration_ms": 3235
+      },
+      {
+        "row_id": "payments-charge-001",
+        "passed": true,
+        "duration_ms": 4574
+      },
+      {
+        "row_id": "payments-not-found-001",
+        "passed": true,
+        "duration_ms": 5166
+      },
+      {
+        "row_id": "risk-refund-001",
+        "passed": false,
+        "duration_ms": 9723
+      },
+      {
+        "row_id": "risk-block-only-001",
+        "passed": true,
+        "duration_ms": 9709
+      },
+      {
+        "row_id": "risk-low-score-001",
+        "passed": false,
+        "duration_ms": 4385
+      },
+      {
+        "row_id": "support-then-payments-001",
+        "passed": false,
+        "duration_ms": 6764
+      },
+      {
+        "row_id": "hallucination-trap-001",
+        "passed": true,
+        "duration_ms": 5833
+      },
+      {
+        "row_id": "out-of-scope-001",
+        "passed": true,
+        "duration_ms": 2127
+      }
+    ]
+  }
+}
