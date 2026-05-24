@@ -54,32 +54,122 @@ Domain vocabulary is defined in [CONTEXT.md](CONTEXT.md).
 | `hallucination-trap-001` | Vague query, no tools expected |
 | `out-of-scope-001` | Out-of-scope request, no routing |
 
-## Quick start
+## Running the benchmark
 
-**Prerequisites:** [Bun](https://bun.sh), a Lemonade (or compatible) server with at least one GGUF model loaded.
+### Prerequisites
+
+1. **[Bun](https://bun.sh)** installed (`bun --version`).
+2. **Lemonade** (or another OpenAI-compatible server) running locally with at least one GGUF model loaded.
+   Default API: `http://localhost:13305/v1`
+3. The model id you want to test must match what the server exposes (see step 2 below).
+
+### 1. Install dependencies
 
 ```bash
-# Install dependencies
 bun install
-
-# Configure model endpoint (copy template, edit model id)
-cp .env.example .env
-
-# Run full benchmark for one model
-bun run bench --out runs/Qwen3.5-9B-GGUF
-
-# Run a single row (debug)
-bun run bench --row risk-refund-001 --out runs/debug
-
-# Save snapshot to benchmarks/ for long-term comparison
-bun run bench --out runs/Qwen3.5-9B-GGUF --save-comparison
-
-# Regenerate comparison dashboard
-bun run dashboard
-# Open dashboard.html in a browser
 ```
 
-### CLI flags
+### 2. Configure the model
+
+Copy the env template and set the model you want to benchmark:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env`:
+
+```bash
+LEMONADE_BASE_URL=http://localhost:13305/v1
+LEMONADE_MODEL=Qwen3.5-9B-GGUF          # must match a loaded model
+LEMONADE_API_KEY=not-needed-for-local-lemonade
+```
+
+List available models from your server:
+
+```bash
+curl -s http://localhost:13305/v1/models | jq '.data[].id'
+```
+
+Bun loads `.env` automatically when you run `bun run bench`. Do not commit `.env` — only `.env.example` is tracked.
+
+### 3. Run the full dataset
+
+Run all 12 rows and write results to a directory named after the model:
+
+```bash
+bun run bench --out runs/Qwen3.5-9B-GGUF
+```
+
+The harness prints progress as each row runs (`running support-status-001`, …) and ends with a JSON **summary** on stdout. Artifacts are written under `--out`:
+
+```
+runs/Qwen3.5-9B-GGUF/
+├── summary.json
+└── traces/
+    ├── support-status-001.json
+    ├── support-list-001.json
+    └── …
+```
+
+Each trace file records the query, worker route, tool calls, world-state mutations, and per-axis score. Inspect a failure with:
+
+```bash
+jq '.score' runs/Qwen3.5-9B-GGUF/traces/risk-refund-001.json
+```
+
+If you omit `--out`, results go to a timestamped folder under `runs/` (e.g. `runs/2026-05-24T12-00-00.000Z`).
+
+### 4. Benchmark another model
+
+Load a different GGUF model in Lemonade, then either edit `.env` or override the model inline for a one-off run:
+
+```bash
+# Fast: override model without editing .env
+LEMONADE_MODEL=gpt-oss-20b-mxfp4-GGUF bun run bench --out runs/gpt-oss-20b-mxfp4-GGUF --save-comparison
+```
+
+Or update `.env` and run with a matching output path:
+
+```bash
+# .env → LEMONADE_MODEL=Gemma-4-E4B-it-GGUF
+bun run bench --out runs/Gemma-4-E4B-it-GGUF
+```
+
+Repeat for each model you want on the leaderboard. The output directory name should include `GGUF` so the dashboard picks it up.
+
+### 5. Debug a single row
+
+Useful when iterating on prompts or scoring:
+
+```bash
+bun run bench --row risk-refund-001 --out runs/debug
+```
+
+Only the named row runs. `--save-comparison` requires a full dataset run (omit `--row`).
+
+### 6. Save a comparison snapshot (optional)
+
+After a full run, persist the summary to `benchmarks/` for version-controlled comparison:
+
+```bash
+bun run bench --out runs/Qwen3.5-9B-GGUF --save-comparison
+```
+
+This writes `benchmarks/models/<model-id>.json` and updates `benchmarks/comparison.json`. Use this when you want to keep results in git; raw traces stay in `runs/` (gitignored).
+
+### 7. View results in the dashboard
+
+Regenerate the HTML report from all `runs/*GGUF*/` directories:
+
+```bash
+bun run dashboard
+open dashboard.html   # or xdg-open / your browser
+```
+
+The dashboard shows pass rates, axis breakdowns, and a row × model heatmap. Re-run `bun run dashboard` after adding new model runs.
+
+### CLI reference
 
 | Flag | Description |
 |------|-------------|
@@ -88,7 +178,7 @@ bun run dashboard
 | `--dataset v1` | Dataset version (only `v1` supported) |
 | `--save-comparison` | Write summary to `benchmarks/models/<model>.json` and update index |
 
-Set `LEMONADE_MODEL`, `LEMONADE_BASE_URL`, and `LEMONADE_API_KEY` in `.env` (see `.env.example`).
+**Typical workflow:** configure `.env` → `bun run bench --out runs/<Model-GGUF>` → repeat for each model → `bun run dashboard` → open `dashboard.html`.
 
 ## Results layout
 
