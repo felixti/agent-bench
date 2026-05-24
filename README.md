@@ -306,4 +306,4 @@ dashboard-data.json
 
 ## License
 
-Not specified — add a license file if you plan to distribute this publicly.
+[MIT](LICENSE) © 2026 Felipe Augusto Felix
