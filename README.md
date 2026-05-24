@@ -4,6 +4,16 @@ Benchmark harness for comparing **local GGUF models** on a hierarchical multi-ag
 
 Designed to run against [Lemonade](https://github.com/lemonade-sdk/lemonade) or any OpenAI-compatible local server at `http://localhost:13305/v1`.
 
+## Benchmark results
+
+Sample dashboard output from the v1 dataset — seven GGUF models on the [reference setup](#reference-setup) (Aurora, Lemonade Docker + ROCm):
+
+![Payment Agent Benchmark — leaderboard and axis pass rates](docs/images/dashboard-leaderboard.png)
+
+![Payment Agent Benchmark — completion rates and row pass matrix](docs/images/dashboard-heatmap.png)
+
+Three models scored **100%** (12/12 rows): `Gemma-4-26B-A4B-it-GGUF`, `Gemma-4-E4B-it-GGUF`, and `Qwen3.5-9B-GGUF`. Average pass rate across all models: **88.1%**. Regenerate the dashboard and screenshots after new runs — see [Dashboard](#dashboard).
+
 ## What it measures
 
 Each **row** in the v1 dataset is an independent scenario with a query, seeded world state, and expected behavior. A row passes only when all five axes pass:
@@ -271,6 +281,13 @@ bunx serve .
 
 Re-run `bun run dashboard` after adding or updating model runs under `runs/`. Commit `dashboard-data.json` alongside `dashboard.html` if you want published results to stay in sync on GitHub.
 
+Refresh README screenshots:
+
+```bash
+bun run dashboard
+bun scripts/capture-dashboard-screenshots.mjs
+```
+
 The dashboard shows:
 
 - **Summary cards** — model count, best/average pass rate, row count
@@ -299,7 +316,9 @@ src/
 ├── llm/          # Lemonade OpenAI client
 └── prompts/      # Assistant prompt (versioned)
 dataset/v1/       # Benchmark rows
-docs/adr/         # Architecture decision records
+docs/
+├── adr/          # Architecture decision records
+└── images/       # README dashboard screenshots
 dashboard.html    # generated UI (serve over HTTP)
 dashboard-data.json
 ```
