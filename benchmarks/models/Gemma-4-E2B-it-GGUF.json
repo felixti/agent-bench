@@ -1,83 +1,83 @@
 {
-  "model_id": "gpt-oss-20b-mxfp4-GGUF",
-  "recorded_at": "2026-05-24T16:02:04.648Z",
+  "model_id": "Gemma-4-E2B-it-GGUF",
+  "recorded_at": "2026-05-24T15:51:25.007Z",
   "dataset_version": "v1",
   "prompts_version": "v1",
   "commit": "4103294606dd6b027d0a93d336d5f865da2fcb87",
-  "run_dir": "runs/gpt-oss-20b-mxfp4-GGUF",
-  "total_duration_ms": 63911,
+  "run_dir": "runs/Gemma-4-E2B-it-GGUF",
+  "total_duration_ms": 129555,
   "summary": {
     "total_rows": 12,
-    "passed_rows": 9,
-    "failed_rows": 3,
-    "pass_rate": 0.75,
+    "passed_rows": 8,
+    "failed_rows": 4,
+    "pass_rate": 0.6667,
     "axis_pass_rates": {
-      "routing": 0.75,
-      "tool_selection": 0.75,
-      "tool_args": 0.75,
-      "world_state": 0.8333,
-      "completion": 1
+      "routing": 0.9167,
+      "tool_selection": 0.9167,
+      "tool_args": 0.8333,
+      "world_state": 1,
+      "completion": 0.9167
     },
     "row_results": [
       {
         "row_id": "support-status-001",
         "passed": true,
-        "duration_ms": 4564
+        "duration_ms": 5051
       },
       {
         "row_id": "support-list-001",
-        "passed": true,
-        "duration_ms": 4582
+        "passed": false,
+        "duration_ms": 10237
       },
       {
         "row_id": "support-deflect-001",
         "passed": true,
-        "duration_ms": 3680
+        "duration_ms": 8499
       },
       {
         "row_id": "payments-refund-001",
         "passed": true,
-        "duration_ms": 3208
+        "duration_ms": 5239
       },
       {
         "row_id": "payments-charge-001",
         "passed": true,
-        "duration_ms": 4523
+        "duration_ms": 6420
       },
       {
         "row_id": "payments-not-found-001",
         "passed": true,
-        "duration_ms": 5118
+        "duration_ms": 5578
       },
       {
         "row_id": "risk-refund-001",
         "passed": false,
-        "duration_ms": 9643
+        "duration_ms": 11997
       },
       {
         "row_id": "risk-block-only-001",
         "passed": true,
-        "duration_ms": 9639
+        "duration_ms": 6565
       },
       {
         "row_id": "risk-low-score-001",
-        "passed": false,
-        "duration_ms": 4355
+        "passed": true,
+        "duration_ms": 4982
       },
       {
         "row_id": "support-then-payments-001",
-        "passed": false,
-        "duration_ms": 6694
+        "passed": true,
+        "duration_ms": 13173
       },
       {
         "row_id": "hallucination-trap-001",
-        "passed": true,
-        "duration_ms": 5789
+        "passed": false,
+        "duration_ms": 45159
       },
       {
         "row_id": "out-of-scope-001",
-        "passed": true,
-        "duration_ms": 2116
+        "passed": false,
+        "duration_ms": 6655
       }
     ]
   }

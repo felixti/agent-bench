@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T03:28:44.148Z",
+  "generated_at": "2026-05-24T16:52:44.994Z",
   "runs_root": "runs",
   "models": [
     {
@@ -21,71 +21,71 @@
           {
             "row_id": "support-status-001",
             "passed": true,
-            "duration_ms": 61051
+            "duration_ms": 59981
           },
           {
             "row_id": "support-list-001",
             "passed": true,
-            "duration_ms": 21782
+            "duration_ms": 21559
           },
           {
             "row_id": "support-deflect-001",
             "passed": true,
-            "duration_ms": 16539
+            "duration_ms": 16338
           },
           {
             "row_id": "payments-refund-001",
             "passed": true,
-            "duration_ms": 28123
+            "duration_ms": 28086
           },
           {
             "row_id": "payments-charge-001",
             "passed": true,
-            "duration_ms": 80672
+            "duration_ms": 78711
           },
           {
             "row_id": "payments-not-found-001",
             "passed": true,
-            "duration_ms": 24734
+            "duration_ms": 24563
           },
           {
             "row_id": "risk-refund-001",
             "passed": true,
-            "duration_ms": 38292
+            "duration_ms": 38145
           },
           {
             "row_id": "risk-block-only-001",
             "passed": true,
-            "duration_ms": 28792
+            "duration_ms": 28706
           },
           {
             "row_id": "risk-low-score-001",
             "passed": true,
-            "duration_ms": 23038
+            "duration_ms": 23064
           },
           {
             "row_id": "support-then-payments-001",
             "passed": true,
-            "duration_ms": 39006
+            "duration_ms": 38819
           },
           {
             "row_id": "hallucination-trap-001",
             "passed": true,
-            "duration_ms": 32863
+            "duration_ms": 32794
           },
           {
             "row_id": "out-of-scope-001",
             "passed": true,
-            "duration_ms": 6060
+            "duration_ms": 6027
           }
         ]
       },
-      "total_duration_ms": 400952,
+      "total_duration_ms": 396793,
       "rows": [
         {
           "row_id": "support-status-001",
           "passed": true,
-          "duration_ms": 61051,
+          "duration_ms": 59981,
           "axes": {
             "routing": {
               "passed": true,
@@ -112,7 +112,7 @@
         {
           "row_id": "support-list-001",
           "passed": true,
-          "duration_ms": 21782,
+          "duration_ms": 21559,
           "axes": {
             "routing": {
               "passed": true,
@@ -139,7 +139,7 @@
         {
           "row_id": "support-deflect-001",
           "passed": true,
-          "duration_ms": 16539,
+          "duration_ms": 16338,
           "axes": {
             "routing": {
               "passed": true,
@@ -166,7 +166,7 @@
         {
           "row_id": "payments-refund-001",
           "passed": true,
-          "duration_ms": 28123,
+          "duration_ms": 28086,
           "axes": {
             "routing": {
               "passed": true,
@@ -193,7 +193,7 @@
         {
           "row_id": "payments-charge-001",
           "passed": true,
-          "duration_ms": 80672,
+          "duration_ms": 78711,
           "axes": {
             "routing": {
               "passed": true,
@@ -220,7 +220,7 @@
         {
           "row_id": "payments-not-found-001",
           "passed": true,
-          "duration_ms": 24734,
+          "duration_ms": 24563,
           "axes": {
             "routing": {
               "passed": true,
@@ -247,7 +247,7 @@
         {
           "row_id": "risk-refund-001",
           "passed": true,
-          "duration_ms": 38292,
+          "duration_ms": 38145,
           "axes": {
             "routing": {
               "passed": true,
@@ -274,7 +274,7 @@
         {
           "row_id": "risk-block-only-001",
           "passed": true,
-          "duration_ms": 28792,
+          "duration_ms": 28706,
           "axes": {
             "routing": {
               "passed": true,
@@ -301,7 +301,7 @@
         {
           "row_id": "risk-low-score-001",
           "passed": true,
-          "duration_ms": 23038,
+          "duration_ms": 23064,
           "axes": {
             "routing": {
               "passed": true,
@@ -328,7 +328,7 @@
         {
           "row_id": "support-then-payments-001",
           "passed": true,
-          "duration_ms": 39006,
+          "duration_ms": 38819,
           "axes": {
             "routing": {
               "passed": true,
@@ -355,7 +355,7 @@
         {
           "row_id": "hallucination-trap-001",
           "passed": true,
-          "duration_ms": 32863,
+          "duration_ms": 32794,
           "axes": {
             "routing": {
               "passed": true,
@@ -382,413 +382,7 @@
         {
           "row_id": "out-of-scope-001",
           "passed": true,
-          "duration_ms": 6060,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: none"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "model_id": "Gemma-4-E4B-it-GGUF",
-      "run_dir": "runs/Gemma-4-E4B-it-GGUF",
-      "summary": {
-        "total_rows": 12,
-        "passed_rows": 12,
-        "failed_rows": 0,
-        "pass_rate": 1,
-        "axis_pass_rates": {
-          "routing": 1,
-          "tool_selection": 1,
-          "tool_args": 1,
-          "world_state": 1,
-          "completion": 1
-        },
-        "row_results": [
-          {
-            "row_id": "support-status-001",
-            "passed": true,
-            "duration_ms": 12958
-          },
-          {
-            "row_id": "support-list-001",
-            "passed": true,
-            "duration_ms": 7309
-          },
-          {
-            "row_id": "support-deflect-001",
-            "passed": true,
-            "duration_ms": 8580
-          },
-          {
-            "row_id": "payments-refund-001",
-            "passed": true,
-            "duration_ms": 15906
-          },
-          {
-            "row_id": "payments-charge-001",
-            "passed": true,
-            "duration_ms": 6689
-          },
-          {
-            "row_id": "payments-not-found-001",
-            "passed": true,
-            "duration_ms": 9295
-          },
-          {
-            "row_id": "risk-refund-001",
-            "passed": true,
-            "duration_ms": 20088
-          },
-          {
-            "row_id": "risk-block-only-001",
-            "passed": true,
-            "duration_ms": 15166
-          },
-          {
-            "row_id": "risk-low-score-001",
-            "passed": true,
-            "duration_ms": 9153
-          },
-          {
-            "row_id": "support-then-payments-001",
-            "passed": true,
-            "duration_ms": 25431
-          },
-          {
-            "row_id": "hallucination-trap-001",
-            "passed": true,
-            "duration_ms": 14637
-          },
-          {
-            "row_id": "out-of-scope-001",
-            "passed": true,
-            "duration_ms": 1922
-          }
-        ]
-      },
-      "total_duration_ms": 147134,
-      "rows": [
-        {
-          "row_id": "support-status-001",
-          "passed": true,
-          "duration_ms": 12958,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: support"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "support-list-001",
-          "passed": true,
-          "duration_ms": 7309,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: support"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "support-deflect-001",
-          "passed": true,
-          "duration_ms": 8580,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "payments-refund-001",
-          "passed": true,
-          "duration_ms": 15906,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "payments-charge-001",
-          "passed": true,
-          "duration_ms": 6689,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "payments-not-found-001",
-          "passed": true,
-          "duration_ms": 9295,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "risk-refund-001",
-          "passed": true,
-          "duration_ms": 20088,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: risk -> payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "risk-block-only-001",
-          "passed": true,
-          "duration_ms": 15166,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: risk"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "risk-low-score-001",
-          "passed": true,
-          "duration_ms": 9153,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: risk"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "support-then-payments-001",
-          "passed": true,
-          "duration_ms": 25431,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: support -> payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "hallucination-trap-001",
-          "passed": true,
-          "duration_ms": 14637,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "routing ignored for this row"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "out-of-scope-001",
-          "passed": true,
-          "duration_ms": 1922,
+          "duration_ms": 6027,
           "axes": {
             "routing": {
               "passed": true,
@@ -833,71 +427,71 @@
           {
             "row_id": "support-status-001",
             "passed": true,
-            "duration_ms": 6961
+            "duration_ms": 7690
           },
           {
             "row_id": "support-list-001",
             "passed": true,
-            "duration_ms": 7611
+            "duration_ms": 8457
           },
           {
             "row_id": "support-deflect-001",
             "passed": true,
-            "duration_ms": 6840
+            "duration_ms": 7572
           },
           {
             "row_id": "payments-refund-001",
             "passed": true,
-            "duration_ms": 7266
+            "duration_ms": 8012
           },
           {
             "row_id": "payments-charge-001",
             "passed": true,
-            "duration_ms": 6810
+            "duration_ms": 7528
           },
           {
             "row_id": "payments-not-found-001",
             "passed": true,
-            "duration_ms": 7854
+            "duration_ms": 8640
           },
           {
             "row_id": "risk-refund-001",
             "passed": false,
-            "duration_ms": 8347
+            "duration_ms": 9021
           },
           {
             "row_id": "risk-block-only-001",
             "passed": true,
-            "duration_ms": 13463
+            "duration_ms": 14919
           },
           {
             "row_id": "risk-low-score-001",
             "passed": false,
-            "duration_ms": 11620
+            "duration_ms": 12876
           },
           {
             "row_id": "support-then-payments-001",
             "passed": false,
-            "duration_ms": 12628
+            "duration_ms": 13805
           },
           {
             "row_id": "hallucination-trap-001",
             "passed": true,
-            "duration_ms": 10806
+            "duration_ms": 11974
           },
           {
             "row_id": "out-of-scope-001",
             "passed": true,
-            "duration_ms": 3849
+            "duration_ms": 4249
           }
         ]
       },
-      "total_duration_ms": 104055,
+      "total_duration_ms": 114743,
       "rows": [
         {
           "row_id": "support-status-001",
           "passed": true,
-          "duration_ms": 6961,
+          "duration_ms": 7690,
           "axes": {
             "routing": {
               "passed": true,
@@ -924,7 +518,7 @@
         {
           "row_id": "support-list-001",
           "passed": true,
-          "duration_ms": 7611,
+          "duration_ms": 8457,
           "axes": {
             "routing": {
               "passed": true,
@@ -951,7 +545,7 @@
         {
           "row_id": "support-deflect-001",
           "passed": true,
-          "duration_ms": 6840,
+          "duration_ms": 7572,
           "axes": {
             "routing": {
               "passed": true,
@@ -978,7 +572,7 @@
         {
           "row_id": "payments-refund-001",
           "passed": true,
-          "duration_ms": 7266,
+          "duration_ms": 8012,
           "axes": {
             "routing": {
               "passed": true,
@@ -1005,7 +599,7 @@
         {
           "row_id": "payments-charge-001",
           "passed": true,
-          "duration_ms": 6810,
+          "duration_ms": 7528,
           "axes": {
             "routing": {
               "passed": true,
@@ -1032,7 +626,7 @@
         {
           "row_id": "payments-not-found-001",
           "passed": true,
-          "duration_ms": 7854,
+          "duration_ms": 8640,
           "axes": {
             "routing": {
               "passed": true,
@@ -1059,7 +653,7 @@
         {
           "row_id": "risk-refund-001",
           "passed": false,
-          "duration_ms": 8347,
+          "duration_ms": 9021,
           "axes": {
             "routing": {
               "passed": false,
@@ -1086,7 +680,7 @@
         {
           "row_id": "risk-block-only-001",
           "passed": true,
-          "duration_ms": 13463,
+          "duration_ms": 14919,
           "axes": {
             "routing": {
               "passed": true,
@@ -1113,7 +707,7 @@
         {
           "row_id": "risk-low-score-001",
           "passed": false,
-          "duration_ms": 11620,
+          "duration_ms": 12876,
           "axes": {
             "routing": {
               "passed": false,
@@ -1140,7 +734,7 @@
         {
           "row_id": "support-then-payments-001",
           "passed": false,
-          "duration_ms": 12628,
+          "duration_ms": 13805,
           "axes": {
             "routing": {
               "passed": true,
@@ -1167,7 +761,7 @@
         {
           "row_id": "hallucination-trap-001",
           "passed": true,
-          "duration_ms": 10806,
+          "duration_ms": 11974,
           "axes": {
             "routing": {
               "passed": true,
@@ -1194,7 +788,7 @@
         {
           "row_id": "out-of-scope-001",
           "passed": true,
-          "duration_ms": 3849,
+          "duration_ms": 4249,
           "axes": {
             "routing": {
               "passed": true,
@@ -1239,71 +833,71 @@
           {
             "row_id": "support-status-001",
             "passed": true,
-            "duration_ms": 4719
+            "duration_ms": 4564
           },
           {
             "row_id": "support-list-001",
             "passed": true,
-            "duration_ms": 4648
+            "duration_ms": 4582
           },
           {
             "row_id": "support-deflect-001",
             "passed": true,
-            "duration_ms": 3732
+            "duration_ms": 3680
           },
           {
             "row_id": "payments-refund-001",
             "passed": true,
-            "duration_ms": 3235
+            "duration_ms": 3208
           },
           {
             "row_id": "payments-charge-001",
             "passed": true,
-            "duration_ms": 4574
+            "duration_ms": 4523
           },
           {
             "row_id": "payments-not-found-001",
             "passed": true,
-            "duration_ms": 5166
+            "duration_ms": 5118
           },
           {
             "row_id": "risk-refund-001",
             "passed": false,
-            "duration_ms": 9723
+            "duration_ms": 9643
           },
           {
             "row_id": "risk-block-only-001",
             "passed": true,
-            "duration_ms": 9709
+            "duration_ms": 9639
           },
           {
             "row_id": "risk-low-score-001",
             "passed": false,
-            "duration_ms": 4385
+            "duration_ms": 4355
           },
           {
             "row_id": "support-then-payments-001",
             "passed": false,
-            "duration_ms": 6764
+            "duration_ms": 6694
           },
           {
             "row_id": "hallucination-trap-001",
             "passed": true,
-            "duration_ms": 5833
+            "duration_ms": 5789
           },
           {
             "row_id": "out-of-scope-001",
             "passed": true,
-            "duration_ms": 2127
+            "duration_ms": 2116
           }
         ]
       },
-      "total_duration_ms": 64615,
+      "total_duration_ms": 63911,
       "rows": [
         {
           "row_id": "support-status-001",
           "passed": true,
-          "duration_ms": 4719,
+          "duration_ms": 4564,
           "axes": {
             "routing": {
               "passed": true,
@@ -1330,7 +924,7 @@
         {
           "row_id": "support-list-001",
           "passed": true,
-          "duration_ms": 4648,
+          "duration_ms": 4582,
           "axes": {
             "routing": {
               "passed": true,
@@ -1357,7 +951,7 @@
         {
           "row_id": "support-deflect-001",
           "passed": true,
-          "duration_ms": 3732,
+          "duration_ms": 3680,
           "axes": {
             "routing": {
               "passed": true,
@@ -1384,7 +978,7 @@
         {
           "row_id": "payments-refund-001",
           "passed": true,
-          "duration_ms": 3235,
+          "duration_ms": 3208,
           "axes": {
             "routing": {
               "passed": true,
@@ -1411,7 +1005,7 @@
         {
           "row_id": "payments-charge-001",
           "passed": true,
-          "duration_ms": 4574,
+          "duration_ms": 4523,
           "axes": {
             "routing": {
               "passed": true,
@@ -1438,7 +1032,7 @@
         {
           "row_id": "payments-not-found-001",
           "passed": true,
-          "duration_ms": 5166,
+          "duration_ms": 5118,
           "axes": {
             "routing": {
               "passed": true,
@@ -1465,7 +1059,7 @@
         {
           "row_id": "risk-refund-001",
           "passed": false,
-          "duration_ms": 9723,
+          "duration_ms": 9643,
           "axes": {
             "routing": {
               "passed": false,
@@ -1492,7 +1086,7 @@
         {
           "row_id": "risk-block-only-001",
           "passed": true,
-          "duration_ms": 9709,
+          "duration_ms": 9639,
           "axes": {
             "routing": {
               "passed": true,
@@ -1519,7 +1113,7 @@
         {
           "row_id": "risk-low-score-001",
           "passed": false,
-          "duration_ms": 4385,
+          "duration_ms": 4355,
           "axes": {
             "routing": {
               "passed": false,
@@ -1546,7 +1140,7 @@
         {
           "row_id": "support-then-payments-001",
           "passed": false,
-          "duration_ms": 6764,
+          "duration_ms": 6694,
           "axes": {
             "routing": {
               "passed": false,
@@ -1573,7 +1167,7 @@
         {
           "row_id": "hallucination-trap-001",
           "passed": true,
-          "duration_ms": 5833,
+          "duration_ms": 5789,
           "axes": {
             "routing": {
               "passed": true,
@@ -1600,7 +1194,7 @@
         {
           "row_id": "out-of-scope-001",
           "passed": true,
-          "duration_ms": 2127,
+          "duration_ms": 2116,
           "axes": {
             "routing": {
               "passed": true,
@@ -1627,495 +1221,89 @@
       ]
     },
     {
-      "model_id": "Qwen3.5-4B-MTP-GGUF",
-      "run_dir": "runs/Qwen3.5-4B-MTP-GGUF",
+      "model_id": "Qwen3.6-35B-A3B-GGUF",
+      "run_dir": "runs/Qwen3.6-35B-A3B-GGUF",
       "summary": {
         "total_rows": 12,
-        "passed_rows": 9,
-        "failed_rows": 3,
-        "pass_rate": 0.75,
+        "passed_rows": 11,
+        "failed_rows": 1,
+        "pass_rate": 0.9167,
         "axis_pass_rates": {
-          "routing": 0.75,
+          "routing": 0.9167,
           "tool_selection": 0.9167,
           "tool_args": 0.9167,
-          "world_state": 1,
-          "completion": 1
-        },
-        "row_results": [
-          {
-            "row_id": "support-status-001",
-            "passed": false,
-            "duration_ms": 12690
-          },
-          {
-            "row_id": "support-list-001",
-            "passed": true,
-            "duration_ms": 7046
-          },
-          {
-            "row_id": "support-deflect-001",
-            "passed": true,
-            "duration_ms": 7873
-          },
-          {
-            "row_id": "payments-refund-001",
-            "passed": true,
-            "duration_ms": 8487
-          },
-          {
-            "row_id": "payments-charge-001",
-            "passed": true,
-            "duration_ms": 7342
-          },
-          {
-            "row_id": "payments-not-found-001",
-            "passed": false,
-            "duration_ms": 13957
-          },
-          {
-            "row_id": "risk-refund-001",
-            "passed": true,
-            "duration_ms": 16908
-          },
-          {
-            "row_id": "risk-block-only-001",
-            "passed": true,
-            "duration_ms": 9957
-          },
-          {
-            "row_id": "risk-low-score-001",
-            "passed": true,
-            "duration_ms": 7402
-          },
-          {
-            "row_id": "support-then-payments-001",
-            "passed": true,
-            "duration_ms": 12604
-          },
-          {
-            "row_id": "hallucination-trap-001",
-            "passed": true,
-            "duration_ms": 14307
-          },
-          {
-            "row_id": "out-of-scope-001",
-            "passed": false,
-            "duration_ms": 9818
-          }
-        ]
-      },
-      "total_duration_ms": 128391,
-      "rows": [
-        {
-          "row_id": "support-status-001",
-          "passed": false,
-          "duration_ms": 12690,
-          "axes": {
-            "routing": {
-              "passed": false,
-              "details": "expected route support, got none"
-            },
-            "tool_selection": {
-              "passed": false,
-              "details": "missing support.get_payment_status"
-            },
-            "tool_args": {
-              "passed": false,
-              "details": "no argument match for support.get_payment_status"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "support-list-001",
-          "passed": true,
-          "duration_ms": 7046,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: support"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "support-deflect-001",
-          "passed": true,
-          "duration_ms": 7873,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "payments-refund-001",
-          "passed": true,
-          "duration_ms": 8487,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "payments-charge-001",
-          "passed": true,
-          "duration_ms": 7342,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "payments-not-found-001",
-          "passed": false,
-          "duration_ms": 13957,
-          "axes": {
-            "routing": {
-              "passed": false,
-              "details": "expected route payments, got payments -> support"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "risk-refund-001",
-          "passed": true,
-          "duration_ms": 16908,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: risk -> payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "risk-block-only-001",
-          "passed": true,
-          "duration_ms": 9957,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: risk"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "risk-low-score-001",
-          "passed": true,
-          "duration_ms": 7402,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: risk"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "support-then-payments-001",
-          "passed": true,
-          "duration_ms": 12604,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "route matched: support -> payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "world state matched"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "hallucination-trap-001",
-          "passed": true,
-          "duration_ms": 14307,
-          "axes": {
-            "routing": {
-              "passed": true,
-              "details": "routing ignored for this row"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        },
-        {
-          "row_id": "out-of-scope-001",
-          "passed": false,
-          "duration_ms": 9818,
-          "axes": {
-            "routing": {
-              "passed": false,
-              "details": "expected route none, got payments"
-            },
-            "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
-            },
-            "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
-            },
-            "world_state": {
-              "passed": true,
-              "details": "no world state assertion"
-            },
-            "completion": {
-              "passed": true,
-              "details": "completed cleanly"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "model_id": "Qwen3.5-9B-GGUF",
-      "run_dir": "runs/Qwen3.5-9B-GGUF",
-      "summary": {
-        "total_rows": 12,
-        "passed_rows": 12,
-        "failed_rows": 0,
-        "pass_rate": 1,
-        "axis_pass_rates": {
-          "routing": 1,
-          "tool_selection": 1,
-          "tool_args": 1,
-          "world_state": 1,
+          "world_state": 0.9167,
           "completion": 1
         },
         "row_results": [
           {
             "row_id": "support-status-001",
             "passed": true,
-            "duration_ms": 8561
+            "duration_ms": 28235
           },
           {
             "row_id": "support-list-001",
             "passed": true,
-            "duration_ms": 10983
+            "duration_ms": 19771
           },
           {
             "row_id": "support-deflect-001",
             "passed": true,
-            "duration_ms": 12807
+            "duration_ms": 31593
           },
           {
             "row_id": "payments-refund-001",
             "passed": true,
-            "duration_ms": 11537
+            "duration_ms": 32660
           },
           {
             "row_id": "payments-charge-001",
             "passed": true,
-            "duration_ms": 11194
+            "duration_ms": 24435
           },
           {
             "row_id": "payments-not-found-001",
             "passed": true,
-            "duration_ms": 15829
+            "duration_ms": 56564
           },
           {
             "row_id": "risk-refund-001",
-            "passed": true,
-            "duration_ms": 33617
+            "passed": false,
+            "duration_ms": 37607
           },
           {
             "row_id": "risk-block-only-001",
             "passed": true,
-            "duration_ms": 11998
+            "duration_ms": 35690
           },
           {
             "row_id": "risk-low-score-001",
             "passed": true,
-            "duration_ms": 9955
+            "duration_ms": 23426
           },
           {
             "row_id": "support-then-payments-001",
             "passed": true,
-            "duration_ms": 18464
+            "duration_ms": 56610
           },
           {
             "row_id": "hallucination-trap-001",
             "passed": true,
-            "duration_ms": 9626
+            "duration_ms": 60470
           },
           {
             "row_id": "out-of-scope-001",
             "passed": true,
-            "duration_ms": 11637
+            "duration_ms": 8843
           }
         ]
       },
-      "total_duration_ms": 166208,
+      "total_duration_ms": 415904,
       "rows": [
         {
           "row_id": "support-status-001",
           "passed": true,
-          "duration_ms": 8561,
+          "duration_ms": 28235,
           "axes": {
             "routing": {
               "passed": true,
@@ -2142,7 +1330,7 @@
         {
           "row_id": "support-list-001",
           "passed": true,
-          "duration_ms": 10983,
+          "duration_ms": 19771,
           "axes": {
             "routing": {
               "passed": true,
@@ -2169,7 +1357,7 @@
         {
           "row_id": "support-deflect-001",
           "passed": true,
-          "duration_ms": 12807,
+          "duration_ms": 31593,
           "axes": {
             "routing": {
               "passed": true,
@@ -2196,7 +1384,7 @@
         {
           "row_id": "payments-refund-001",
           "passed": true,
-          "duration_ms": 11537,
+          "duration_ms": 32660,
           "axes": {
             "routing": {
               "passed": true,
@@ -2223,7 +1411,7 @@
         {
           "row_id": "payments-charge-001",
           "passed": true,
-          "duration_ms": 11194,
+          "duration_ms": 24435,
           "axes": {
             "routing": {
               "passed": true,
@@ -2250,7 +1438,7 @@
         {
           "row_id": "payments-not-found-001",
           "passed": true,
-          "duration_ms": 15829,
+          "duration_ms": 56564,
           "axes": {
             "routing": {
               "passed": true,
@@ -2276,24 +1464,24 @@
         },
         {
           "row_id": "risk-refund-001",
-          "passed": true,
-          "duration_ms": 33617,
+          "passed": false,
+          "duration_ms": 37607,
           "axes": {
             "routing": {
-              "passed": true,
-              "details": "route matched: risk -> payments"
+              "passed": false,
+              "details": "expected route risk -> payments, got none"
             },
             "tool_selection": {
-              "passed": true,
-              "details": "all expected tools were selected"
+              "passed": false,
+              "details": "missing risk.assess_risk"
             },
             "tool_args": {
-              "passed": true,
-              "details": "all expected tool arguments matched"
+              "passed": false,
+              "details": "no argument match for risk.assess_risk"
             },
             "world_state": {
-              "passed": true,
-              "details": "world state matched"
+              "passed": false,
+              "details": "cards.card_001.blocked: expected true, got false"
             },
             "completion": {
               "passed": true,
@@ -2304,7 +1492,7 @@
         {
           "row_id": "risk-block-only-001",
           "passed": true,
-          "duration_ms": 11998,
+          "duration_ms": 35690,
           "axes": {
             "routing": {
               "passed": true,
@@ -2331,7 +1519,7 @@
         {
           "row_id": "risk-low-score-001",
           "passed": true,
-          "duration_ms": 9955,
+          "duration_ms": 23426,
           "axes": {
             "routing": {
               "passed": true,
@@ -2358,7 +1546,7 @@
         {
           "row_id": "support-then-payments-001",
           "passed": true,
-          "duration_ms": 18464,
+          "duration_ms": 56610,
           "axes": {
             "routing": {
               "passed": true,
@@ -2385,7 +1573,7 @@
         {
           "row_id": "hallucination-trap-001",
           "passed": true,
-          "duration_ms": 9626,
+          "duration_ms": 60470,
           "axes": {
             "routing": {
               "passed": true,
@@ -2412,7 +1600,7 @@
         {
           "row_id": "out-of-scope-001",
           "passed": true,
-          "duration_ms": 11637,
+          "duration_ms": 8843,
           "axes": {
             "routing": {
               "passed": true,
@@ -2457,71 +1645,71 @@
           {
             "row_id": "support-status-001",
             "passed": true,
-            "duration_ms": 25410
+            "duration_ms": 24377
           },
           {
             "row_id": "support-list-001",
             "passed": true,
-            "duration_ms": 22646
+            "duration_ms": 21701
           },
           {
             "row_id": "support-deflect-001",
             "passed": true,
-            "duration_ms": 60825
+            "duration_ms": 58252
           },
           {
             "row_id": "payments-refund-001",
             "passed": true,
-            "duration_ms": 36515
+            "duration_ms": 34981
           },
           {
             "row_id": "payments-charge-001",
             "passed": true,
-            "duration_ms": 26578
+            "duration_ms": 25431
           },
           {
             "row_id": "payments-not-found-001",
             "passed": true,
-            "duration_ms": 46385
+            "duration_ms": 44323
           },
           {
             "row_id": "risk-refund-001",
             "passed": false,
-            "duration_ms": 35181
+            "duration_ms": 33752
           },
           {
             "row_id": "risk-block-only-001",
             "passed": true,
-            "duration_ms": 33951
+            "duration_ms": 32494
           },
           {
             "row_id": "risk-low-score-001",
             "passed": true,
-            "duration_ms": 23481
+            "duration_ms": 22552
           },
           {
             "row_id": "support-then-payments-001",
             "passed": true,
-            "duration_ms": 46391
+            "duration_ms": 44835
           },
           {
             "row_id": "hallucination-trap-001",
             "passed": true,
-            "duration_ms": 52596
+            "duration_ms": 50345
           },
           {
             "row_id": "out-of-scope-001",
             "passed": true,
-            "duration_ms": 16217
+            "duration_ms": 15530
           }
         ]
       },
-      "total_duration_ms": 426176,
+      "total_duration_ms": 408573,
       "rows": [
         {
           "row_id": "support-status-001",
           "passed": true,
-          "duration_ms": 25410,
+          "duration_ms": 24377,
           "axes": {
             "routing": {
               "passed": true,
@@ -2548,7 +1736,7 @@
         {
           "row_id": "support-list-001",
           "passed": true,
-          "duration_ms": 22646,
+          "duration_ms": 21701,
           "axes": {
             "routing": {
               "passed": true,
@@ -2575,7 +1763,7 @@
         {
           "row_id": "support-deflect-001",
           "passed": true,
-          "duration_ms": 60825,
+          "duration_ms": 58252,
           "axes": {
             "routing": {
               "passed": true,
@@ -2602,7 +1790,7 @@
         {
           "row_id": "payments-refund-001",
           "passed": true,
-          "duration_ms": 36515,
+          "duration_ms": 34981,
           "axes": {
             "routing": {
               "passed": true,
@@ -2629,7 +1817,7 @@
         {
           "row_id": "payments-charge-001",
           "passed": true,
-          "duration_ms": 26578,
+          "duration_ms": 25431,
           "axes": {
             "routing": {
               "passed": true,
@@ -2656,7 +1844,7 @@
         {
           "row_id": "payments-not-found-001",
           "passed": true,
-          "duration_ms": 46385,
+          "duration_ms": 44323,
           "axes": {
             "routing": {
               "passed": true,
@@ -2683,7 +1871,7 @@
         {
           "row_id": "risk-refund-001",
           "passed": false,
-          "duration_ms": 35181,
+          "duration_ms": 33752,
           "axes": {
             "routing": {
               "passed": false,
@@ -2710,7 +1898,7 @@
         {
           "row_id": "risk-block-only-001",
           "passed": true,
-          "duration_ms": 33951,
+          "duration_ms": 32494,
           "axes": {
             "routing": {
               "passed": true,
@@ -2737,7 +1925,7 @@
         {
           "row_id": "risk-low-score-001",
           "passed": true,
-          "duration_ms": 23481,
+          "duration_ms": 22552,
           "axes": {
             "routing": {
               "passed": true,
@@ -2764,7 +1952,7 @@
         {
           "row_id": "support-then-payments-001",
           "passed": true,
-          "duration_ms": 46391,
+          "duration_ms": 44835,
           "axes": {
             "routing": {
               "passed": true,
@@ -2791,7 +1979,7 @@
         {
           "row_id": "hallucination-trap-001",
           "passed": true,
-          "duration_ms": 52596,
+          "duration_ms": 50345,
           "axes": {
             "routing": {
               "passed": true,
@@ -2818,7 +2006,7 @@
         {
           "row_id": "out-of-scope-001",
           "passed": true,
-          "duration_ms": 16217,
+          "duration_ms": 15530,
           "axes": {
             "routing": {
               "passed": true,

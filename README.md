@@ -1,18 +1,28 @@
 # Payment Agent Benchmark
 
-Benchmark harness for comparing **local GGUF models** on a hierarchical multi-agent payment assistant. The agent receives natural-language queries, routes them through specialized workers (support, risk, payments), calls tools against a simulated world state, and is scored deterministically — no LLM-as-judge.
+Benchmark harness for comparing **local 4-bit GGUF models** on a hierarchical multi-agent payment assistant. The agent receives natural-language queries, routes them through specialized workers (support, risk, payments), calls tools against a simulated world state, and is scored deterministically — no LLM-as-judge.
 
 Designed to run against [Lemonade](https://github.com/lemonade-sdk/lemonade) or any OpenAI-compatible local server at `http://localhost:13305/v1`.
 
 ## Benchmark results
 
-Sample dashboard output from the v1 dataset — seven GGUF models on the [reference setup](#reference-setup) (Aurora, Lemonade Docker + ROCm):
+Sample dashboard output from the v1 dataset on the [reference setup](#reference-setup) (Aurora, Lemonade Docker + ROCm). All models were run as **4-bit GGUF** quantizations. Results are split by model size — **SLMs** (≤ ~9B active params) and **LLMs** (≥ ~20B) — each with its own leaderboard and row pass matrix. Regenerate the dashboard and screenshots after new runs — see [Dashboard](#dashboard).
 
-![Payment Agent Benchmark — leaderboard and axis pass rates](docs/images/dashboard-leaderboard.png)
+### SLMs (small language models)
 
-![Payment Agent Benchmark — completion rates and row pass matrix](docs/images/dashboard-heatmap.png)
+Six models compared; average pass rate **83.3%**. Two scored **100%** (12/12 rows): `Gemma-4-E4B-it-GGUF` and `Qwen3.5-9B-GGUF`.
 
-Three models scored **100%** (12/12 rows): `Gemma-4-26B-A4B-it-GGUF`, `Gemma-4-E4B-it-GGUF`, and `Qwen3.5-9B-GGUF`. Average pass rate across all models: **88.1%**. Regenerate the dashboard and screenshots after new runs — see [Dashboard](#dashboard).
+![Payment Agent Benchmark — SLM leaderboard and axis pass rates](docs/images/dashboard-leaderboard-slm.png)
+
+![Payment Agent Benchmark — SLM completion rates and row pass matrix](docs/images/dashboard-heatmap-slm.png)
+
+### LLMs (large language models)
+
+Five models compared; average pass rate **86.7%**. One scored **100%** (12/12 rows): `Gemma-4-26B-A4B-it-GGUF`.
+
+![Payment Agent Benchmark — LLM leaderboard and axis pass rates](docs/images/dashboard-leaderboard-llm.png)
+
+![Payment Agent Benchmark — LLM completion rates and row pass matrix](docs/images/dashboard-heatmap-llm.png)
 
 ## What it measures
 
@@ -85,15 +95,24 @@ docker run -d \
   ghcr.io/lemonade-sdk/lemonade-server:latest
 ```
 
-The server exposes an OpenAI-compatible API at `http://localhost:13305/v1`. Download GGUF models via the Lemonade model manager, then point this benchmark at them with `LEMONADE_MODEL` (see [Running the benchmark](#running-the-benchmark)).
+The server exposes an OpenAI-compatible API at `http://localhost:13305/v1`. Download **4-bit GGUF** models via the Lemonade model manager, then point this benchmark at them with `LEMONADE_MODEL` (see [Running the benchmark](#running-the-benchmark)).
 
-Models used in the comparison runs:
+Models used in the comparison runs (all **4-bit** quantizations):
 
-- `Gemma-4-26B-A4B-it-GGUF`
+**SLMs**
+
+- `Gemma-4-E2B-it-GGUF`
 - `Gemma-4-E4B-it-GGUF`
-- `GLM-4.7-Flash-GGUF`
+- `Qwen3.5-2B-GGUF`
+- `Qwen3.5-4B-GGUF`
 - `Qwen3.5-4B-MTP-GGUF`
 - `Qwen3.5-9B-GGUF`
+
+**LLMs**
+
+- `Gemma-4-26B-A4B-it-GGUF`
+- `GLM-4.7-Flash-GGUF`
+- `Qwen3.6-35B-A3B-GGUF`
 - `Qwen3.6-35B-A3B-MTP-GGUF`
 - `gpt-oss-20b-mxfp4-GGUF`
 
@@ -281,7 +300,7 @@ bunx serve .
 
 Re-run `bun run dashboard` after adding or updating model runs under `runs/`. Commit `dashboard-data.json` alongside `dashboard.html` if you want published results to stay in sync on GitHub.
 
-Refresh README screenshots:
+Refresh README screenshots (`docs/images/dashboard-leaderboard-{slm,llm}.png`, `docs/images/dashboard-heatmap-{slm,llm}.png`):
 
 ```bash
 bun run dashboard

@@ -1,11 +1,11 @@
 {
   "model_id": "Qwen3.5-4B-MTP-GGUF",
-  "recorded_at": "2026-05-24T02:48:38.871Z",
+  "recorded_at": "2026-05-24T15:27:40.890Z",
   "dataset_version": "v1",
   "prompts_version": "v1",
-  "commit": null,
+  "commit": "4103294606dd6b027d0a93d336d5f865da2fcb87",
   "run_dir": "runs/Qwen3.5-4B-MTP-GGUF",
-  "total_duration_ms": 128391,
+  "total_duration_ms": 121886,
   "summary": {
     "total_rows": 12,
     "passed_rows": 9,
@@ -22,62 +22,62 @@
       {
         "row_id": "support-status-001",
         "passed": false,
-        "duration_ms": 12690
+        "duration_ms": 12116
       },
       {
         "row_id": "support-list-001",
         "passed": true,
-        "duration_ms": 7046
+        "duration_ms": 6417
       },
       {
         "row_id": "support-deflect-001",
         "passed": true,
-        "duration_ms": 7873
+        "duration_ms": 7063
       },
       {
         "row_id": "payments-refund-001",
         "passed": true,
-        "duration_ms": 8487
+        "duration_ms": 6834
       },
       {
         "row_id": "payments-charge-001",
         "passed": true,
-        "duration_ms": 7342
+        "duration_ms": 8979
       },
       {
         "row_id": "payments-not-found-001",
         "passed": false,
-        "duration_ms": 13957
+        "duration_ms": 15947
       },
       {
         "row_id": "risk-refund-001",
         "passed": true,
-        "duration_ms": 16908
+        "duration_ms": 14725
       },
       {
         "row_id": "risk-block-only-001",
         "passed": true,
-        "duration_ms": 9957
+        "duration_ms": 9244
       },
       {
         "row_id": "risk-low-score-001",
         "passed": true,
-        "duration_ms": 7402
+        "duration_ms": 7129
       },
       {
         "row_id": "support-then-payments-001",
         "passed": true,
-        "duration_ms": 12604
+        "duration_ms": 11442
       },
       {
         "row_id": "hallucination-trap-001",
         "passed": true,
-        "duration_ms": 14307
+        "duration_ms": 13614
       },
       {
         "row_id": "out-of-scope-001",
         "passed": false,
-        "duration_ms": 9818
+        "duration_ms": 8376
       }
     ]
   }
